@@ -185,6 +185,18 @@
       <relatedItems xmi:id="_jLyGplHrEeigTaCWP2FprA" id="_6jot4FHXEeil1ar1KlV8rw - metadata" version="Latest" type="schema"/>
       <relatedItems xmi:id="_jLyGp1HrEeigTaCWP2FprA" id="_Pff5QFHXEeil1ar1KlV8rw - metadata" version="Latest" type="schema"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_GcMt8FHxEeigTaCWP2FprA">
+      <baseItem xmi:id="_GcMt8VHxEeigTaCWP2FprA" id="_d9N9sFHwEeigTaCWP2FprA" version="0.1" type="job"/>
+      <relatedItems xmi:id="_GcMt8lHxEeigTaCWP2FprA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GcMt81HxEeigTaCWP2FprA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GcMt9FHxEeigTaCWP2FprA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GcMt9VHxEeigTaCWP2FprA" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GcMt9lHxEeigTaCWP2FprA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GcMt91HxEeigTaCWP2FprA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GcMt-FHxEeigTaCWP2FprA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GcMt-VHxEeigTaCWP2FprA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GcMt-lHxEeigTaCWP2FprA" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_VkY14FHBEeil1ar1KlV8rw" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
     <migrationTask xmi:id="_VkY14VHBEeil1ar1KlV8rw" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_VkY14lHBEeil1ar1KlV8rw" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>

@@ -1,21 +1,21 @@
-CompanyName;seq2
-Amerisourcebergen;1
-Supermedia;2
-Perrigo Company;3
-National Fuel Gas Distribution Corporation;4
-Agilent Technologies;5
-Regis Corporation;6
-Ross Stores;7
-Omnicom Group;8
-Covanta Holding Corporation;9
-Henry Schein;10
-General Growth Properties;11
-Cytec Industries;12
-Fossil;13
-Flowserve Corporation;14
-Seaboard Foods;15
-Wesco Distribution;16
-Pvh Corporation;17
-Buckeye Partners;18
-Colgate-palmolive Company;19
-Tupperware Corporation;20
+Rank;CompanyName
+1;Amerisourcebergen
+2;Supermedia
+3;Perrigo Company
+4;National Fuel Gas Distribution Corporation
+5;Agilent Technologies
+6;Regis Corporation
+7;Ross Stores
+8;Omnicom Group
+9;Covanta Holding Corporation
+10;Henry Schein
+11;General Growth Properties
+12;Cytec Industries
+13;Fossil
+14;Flowserve Corporation
+15;Seaboard Foods
+16;Wesco Distribution
+17;Pvh Corporation
+18;Buckeye Partners
+19;Colgate-palmolive Company
+20;Tupperware Corporation
