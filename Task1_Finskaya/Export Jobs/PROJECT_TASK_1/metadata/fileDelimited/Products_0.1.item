@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_PfpDMFHXEeil1ar1KlV8rw" name="Products" dataPackage="_PfpDMVHXEeil1ar1KlV8rw" Server="Localhost 127.0.0.1" FilePath="D:/Shared_VM/Talend/Topic 01/input/products.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" RemoveEmptyRow="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_PfpDMVHXEeil1ar1KlV8rw" name="default" dataManager="_PfpDMFHXEeil1ar1KlV8rw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_PfpDMlHXEeil1ar1KlV8rw" id="__Fb6kFHWEeil1ar1KlV8rw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_PfpDM1HXEeil1ar1KlV8rw" label="Products" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_PfpDNFHXEeil1ar1KlV8rw" label="ProductName" length="92" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_PfpDNVHXEeil1ar1KlV8rw" label="CompanyName" length="39" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_PfpDNlHXEeil1ar1KlV8rw" label="Price" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
