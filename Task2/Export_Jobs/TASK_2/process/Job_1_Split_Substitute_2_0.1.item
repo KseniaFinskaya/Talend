@@ -2,8 +2,8 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/dbmap" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="64" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="256" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="512" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -148,7 +148,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="512">
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_xHDmAFKYEei2rN19kp4hdw" show="false"/>
@@ -205,11 +205,12 @@
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ORDERS_NEW"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="ORDERS_NEW" name="tDBInput_5">
-      <column comment="" key="true" length="20" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="true" length="12" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="6" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -218,18 +219,18 @@
       <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="5" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="3" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="3" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="512">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" show="false"/>
@@ -265,10 +266,10 @@
     <elementParameter field="TEXT" name="LABEL" value="view_logs"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="ORDERS_NEW" name="tLogRow_1">
-      <column comment="" key="true" length="20" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="true" length="12" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="6" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -277,18 +278,18 @@
       <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="5" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="3" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="3" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="13" offsetLabelY="-32" posX="384" posY="512">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="13" offsetLabelY="-32" posX="736" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
@@ -322,10 +323,10 @@
     <elementParameter field="TEXT" name="LABEL" value="orders_new_output_file"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="ORDERS_NEW" name="tFileOutputDelimited_1">
-      <column comment="" key="true" length="20" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="true" length="12" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="6" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -334,18 +335,18 @@
       <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="5" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="3" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="3" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="640">
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_6" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_xHDmAFKYEei2rN19kp4hdw" show="false"/>
@@ -392,19 +393,20 @@
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ORDERS_REGION"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="ORDERS_REGION" name="tDBInput_6">
       <column comment="" key="true" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="8" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="640">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_REGION" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -417,50 +419,25 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT_KEY"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="REGION"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SUB_REGION"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY_KEY"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTHIGH"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTLOW"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="view_logs"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="ORDERS_NEW" name="tLogRow_2">
-      <column comment="" key="true" length="20" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+    <metadata connector="FLOW" label="ORDERS_REGION" name="tLogRow_2">
+      <column comment="" key="true" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="8" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="50" offsetLabelY="-82" posX="384" posY="640">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="50" offsetLabelY="-82" posX="672" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
@@ -472,8 +449,6 @@
     <elementParameter field="CHECK" name="APPEND" value="false"/>
     <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
     <elementParameter field="CHECK" name="COMPRESS" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" show="false"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
     <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
     <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
@@ -493,31 +468,16 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="orders_region_output_file"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="ORDERS_NEW" name="tFileOutputDelimited_2">
-      <column comment="" key="true" length="20" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+    <metadata connector="FLOW" label="ORDERS_REGION" name="tFileOutputDelimited_2">
+      <column comment="" key="true" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="8" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-32" posY="768">
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="768">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_7" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_xHDmAFKYEei2rN19kp4hdw" show="false"/>
@@ -542,7 +502,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  HR.ORDERS_REGION.REGION, &#xA;  HR.ORDERS_REGION.PAYMENT&#xA;FROM HR.ORDERS_REGION&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  HR.ORDERS_REG_SUBREGION.REGION, &#xA;  HR.ORDERS_REG_SUBREGION.SUB_REGION, &#xA;  HR.ORDERS_REG_SUBREGION.PAYMENT&#xA;FROM HR.ORDERS_REG_SUBREGION&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -566,6 +526,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ORDERS_REGION"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="ORDERS_REG_SUBREGION" name="tDBInput_7">
       <column comment="" key="true" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -573,15 +534,15 @@
       <column comment="" key="true" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="8" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="768">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="768">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_3" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_REG_SUBREGION" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -594,50 +555,30 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT_KEY"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="REGION"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SUB_REGION"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY_KEY"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTHIGH"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTLOW"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="view_logs"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="ORDERS_NEW" name="tLogRow_3">
-      <column comment="" key="true" length="20" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+    <metadata connector="FLOW" label="ORDERS_REG_SUBREGION" name="tLogRow_3">
+      <column comment="" key="true" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="true" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="8" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="50" offsetLabelY="-82" posX="352" posY="768">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="50" offsetLabelY="-82" posX="640" posY="768">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_3" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
@@ -650,7 +591,7 @@
     <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
     <elementParameter field="CHECK" name="COMPRESS" value="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_REG_SUBREGION" show="false"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
     <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
     <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
@@ -670,26 +611,14 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="orders_reg_subregion_output_file"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="ORDERS_NEW" name="tFileOutputDelimited_3">
-      <column comment="" key="true" length="20" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+    <metadata connector="FLOW" label="ORDERS_REG_SUBREGION" name="tFileOutputDelimited_3">
+      <column comment="" key="true" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="true" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="8" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -737,7 +666,158 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="384">
+  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="-64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_1" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ORDERS&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;HR&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="ORDERS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="ORDERS" name="tELTOracleInput_1">
+      <column comment="" key="true" length="12" name="ACCOUNT_KEY" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="LOCATION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="6" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="COUNTRY" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTOracleMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="-64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleMap_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_4"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.56.1&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;HR&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;HR&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="7vKsYnI0Ueo=" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_7Uj3AFL0Eei2rN19kp4hdw-tELTOracleMap_1-PREVIEW.bmp"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="SPLIT_LOCATION"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="ORDERS_LOCATIONS" name="table1">
+      <column comment="" key="true" length="-1" name="ACCOUNT_KEY" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="COUNTRY" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="-1" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="DBMapData">
+      <InputTables name="HR.ORDERS" tableName="HR.ORDERS" joinType="NO_JOIN">
+        <DBMapperTableEntries name="ACCOUNT_KEY"/>
+        <DBMapperTableEntries name="LOCATION"/>
+        <DBMapperTableEntries name="PAYMENT"/>
+        <DBMapperTableEntries name="COUNTRY"/>
+        <DBMapperTableEntries name="REGION"/>
+        <DBMapperTableEntries name="SUB_REGION"/>
+      </InputTables>
+      <OutputTables name="table1" tableName="ORDERS_LOCATIONS">
+        <DBMapperTableEntries name="ACCOUNT_KEY" expression="HR.ORDERS.ACCOUNT_KEY "/>
+        <DBMapperTableEntries name="COUNTRY" expression="substr(HR.ORDERS.LOCATION,1,instr(HR.ORDERS.LOCATION,' -> ')-1)"/>
+        <DBMapperTableEntries name="PAYMENT" expression="HR.ORDERS.PAYMENT "/>
+        <DBMapperTableEntries name="REGION" expression="trim(substr(HR.ORDERS.LOCATION,instr(HR.ORDERS.LOCATION,' -> ',1,1)+4,instr(HR.ORDERS.LOCATION,' -> ',1,2)-(instr(HR.ORDERS.LOCATION,' -> ',1,1)+4)))"/>
+        <DBMapperTableEntries name="SUB_REGION" expression="substr(HR.ORDERS.LOCATION,instr(HR.ORDERS.LOCATION,' -> ',1,2)+4)"/>
+      </OutputTables>
+    </nodeData>
+  </node>
+  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="-64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleOutput_2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="MERGE"/>
+    <elementParameter field="MEMO" name="WHERE_CLAUSE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_MERGE_UPDATE" value="false"/>
+    <elementParameter field="TABLE" name="SCHEMA_UPDATE" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT_KEY"/>
+      <elementValue elementRef="UPDATE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY"/>
+      <elementValue elementRef="UPDATE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
+      <elementValue elementRef="UPDATE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REGION"/>
+      <elementValue elementRef="UPDATE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUB_REGION"/>
+      <elementValue elementRef="UPDATE" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_MERGE_UPDATE_WHERE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="MERGE_UPDATE_WHERE_STRING" value="&quot; &quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_MERGE_UPDATE_DELETE_WHERE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="MERGE_UPDATE_DELETE_WHERE_STRING" value="&quot; &quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_MERGE_INSERT" value="true"/>
+    <elementParameter field="TABLE" name="SCHEMA_INSERT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT_KEY"/>
+      <elementValue elementRef="INSERT" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY"/>
+      <elementValue elementRef="INSERT" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
+      <elementValue elementRef="INSERT" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REGION"/>
+      <elementValue elementRef="INSERT" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUB_REGION"/>
+      <elementValue elementRef="INSERT" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_MERGE_INSERT_WHERE" value="false"/>
+    <elementParameter field="TEXT" name="MERGE_INSERT_WHERE_STRING" value="&quot; &quot;" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ORDERS_LOCATIONS&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;HR&quot;"/>
+    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
+    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false" show="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="TEMP_ORDERS_LOCATIONS_TABLE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="ORDERS_LOCATIONS" name="tELTOracleOutput_2">
+      <column comment="" key="true" length="-1" name="ACCOUNT_KEY" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="COUNTRY" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="-1" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="DOUBLE PRECISION" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - PROVINCES" show="false"/>
@@ -747,7 +827,7 @@
     <elementParameter field="TEXT" name="LABEL" value="PROVINCES"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="TABLE" label="PROVINCES" name="tELTOracleInput_2">
-      <column comment="" key="false" length="-1" name="COUNTRY_KEY" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="5" name="COUNTRY_KEY" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="128" name="COUNTRY_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -759,7 +839,7 @@
       <column comment="" key="false" length="26" name="ISO3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="PHONE_CODE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="6" name="PHONE_CODE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="26" name="IRU" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -770,87 +850,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="-96">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleOutput_1" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="MERGE"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" show="false"/>
-    <elementParameter field="MEMO" name="WHERE_CLAUSE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_MERGE_UPDATE" value="false"/>
-    <elementParameter field="TABLE" name="SCHEMA_UPDATE" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT_KEY"/>
-      <elementValue elementRef="UPDATE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
-      <elementValue elementRef="UPDATE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REGION"/>
-      <elementValue elementRef="UPDATE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SUB_REGION"/>
-      <elementValue elementRef="UPDATE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY_KEY"/>
-      <elementValue elementRef="UPDATE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTHIGH"/>
-      <elementValue elementRef="UPDATE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTLOW"/>
-      <elementValue elementRef="UPDATE" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="USE_MERGE_UPDATE_WHERE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="MERGE_UPDATE_WHERE_STRING" value="&quot; &quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_MERGE_UPDATE_DELETE_WHERE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="MERGE_UPDATE_DELETE_WHERE_STRING" value="&quot; &quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_MERGE_INSERT" value="true"/>
-    <elementParameter field="TABLE" name="SCHEMA_INSERT">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT_KEY"/>
-      <elementValue elementRef="INSERT" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
-      <elementValue elementRef="INSERT" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REGION"/>
-      <elementValue elementRef="INSERT" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SUB_REGION"/>
-      <elementValue elementRef="INSERT" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY_KEY"/>
-      <elementValue elementRef="INSERT" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTHIGH"/>
-      <elementValue elementRef="INSERT" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTLOW"/>
-      <elementValue elementRef="INSERT" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="USE_MERGE_INSERT_WHERE" value="false"/>
-    <elementParameter field="TEXT" name="MERGE_INSERT_WHERE_STRING" value="" show="false"/>
-    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ORDERS_NEW&quot;"/>
-    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;HR&quot;"/>
-    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
-    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
-    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
-    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false" show="false"/>
-    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="INSERT_DATA_TO_ORDERS_NEW"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="ORDERS_NEW" name="tELTOracleOutput_1">
-      <column comment="" key="true" length="20" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="64">
+  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="-50" offsetLabelY="37" posX="1056" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleOutput_3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="MERGE"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
@@ -890,12 +890,12 @@
       <column comment="" key="true" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="8" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tELTOracleMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
+  <node componentName="tELTOracleMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleMap_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_4"/>
@@ -912,7 +912,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_miRYoFKYEei2rN19kp4hdw-tELTOracleMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_7Uj3AFL0Eei2rN19kp4hdw-tELTOracleMap_2-PREVIEW.bmp"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;" show="false"/>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
@@ -1008,7 +1008,7 @@
       </OutputTables>
     </nodeData>
   </node>
-  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="352">
+  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_3" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - DISCOUNTSHIGH" show="false"/>
@@ -1018,15 +1018,15 @@
     <elementParameter field="TEXT" name="LABEL" value="DISCOUNTSHIGH"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="TABLE" label="DISCOUNTSHIGH" name="tELTOracleInput_3">
-      <column comment="" key="false" length="-1" name="ID" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Boolean" usefulColumn="true">
+      <column comment="" key="false" length="12" name="ID" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="DISCOUNT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="3" name="DISCOUNT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="352">
+  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_4" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - DISCOUNTSLOW" show="false"/>
@@ -1036,34 +1036,32 @@
     <elementParameter field="TEXT" name="LABEL" value="DISCOUNTSLOW"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="TABLE" label="DISCOUNTSLOW" name="tELTOracleInput_4">
-      <column comment="" key="false" length="-1" name="ID" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="12" name="ID" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="DISCOUNT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="3" name="DISCOUNT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
   </node>
-  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_1" show="false"/>
-    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ORDERS&quot;"/>
+  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_5" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_LOCATIONS" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ORDERS_LOCATIONS&quot;"/>
     <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;HR&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
-    <elementParameter field="TEXT" name="LABEL" value="ORDERS"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="ORDERS" name="tELTOracleInput_1">
-      <column comment="" key="true" length="12" name="ACCOUNT_KEY" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+    <metadata connector="TABLE" label="ORDERS_LOCATIONS" name="tELTOracleOutput_2">
+      <column comment="" key="true" length="12" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="128" name="LOCATION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="128" name="COUNTRY" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="6" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="128" name="COUNTRY" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1072,91 +1070,36 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tELTOracleMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleMap_1" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_4"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
-    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.56.1&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;HR&quot;" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;HR&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="7vKsYnI0Ueo=" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_miRYoFKYEei2rN19kp4hdw-tELTOracleMap_1-PREVIEW.bmp"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="SPLIT_LOCATION"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="ORDERS_LOCATIONS" name="table1">
-      <column comment="" key="true" length="-1" name="ACCOUNT_KEY" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="COUNTRY" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-    </metadata>
-    <nodeData xsi:type="DBMapData">
-      <InputTables name="HR.ORDERS" tableName="HR.ORDERS" joinType="NO_JOIN">
-        <DBMapperTableEntries name="ACCOUNT_KEY"/>
-        <DBMapperTableEntries name="LOCATION"/>
-        <DBMapperTableEntries name="PAYMENT"/>
-        <DBMapperTableEntries name="COUNTRY"/>
-        <DBMapperTableEntries name="REGION"/>
-        <DBMapperTableEntries name="SUB_REGION"/>
-      </InputTables>
-      <OutputTables name="table1" tableName="ORDERS_LOCATIONS">
-        <DBMapperTableEntries name="ACCOUNT_KEY" expression="HR.ORDERS.ACCOUNT_KEY "/>
-        <DBMapperTableEntries name="COUNTRY" expression="substr(HR.ORDERS.LOCATION,1,instr(HR.ORDERS.LOCATION,' -> ')-1)"/>
-        <DBMapperTableEntries name="PAYMENT" expression="HR.ORDERS.PAYMENT "/>
-        <DBMapperTableEntries name="REGION" expression="trim(substr(HR.ORDERS.LOCATION,instr(HR.ORDERS.LOCATION,' -> ',1,1)+4,instr(HR.ORDERS.LOCATION,' -> ',1,2)-(instr(HR.ORDERS.LOCATION,' -> ',1,1)+4)))"/>
-        <DBMapperTableEntries name="SUB_REGION" expression="substr(HR.ORDERS.LOCATION,instr(HR.ORDERS.LOCATION,' -> ',1,2)+4)"/>
-      </OutputTables>
-    </nodeData>
-  </node>
-  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleOutput_2" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleOutput_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="MERGE"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" show="false"/>
     <elementParameter field="MEMO" name="WHERE_CLAUSE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_MERGE_UPDATE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_MERGE_UPDATE" value="false"/>
     <elementParameter field="TABLE" name="SCHEMA_UPDATE" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT_KEY"/>
       <elementValue elementRef="UPDATE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY"/>
-      <elementValue elementRef="UPDATE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
-      <elementValue elementRef="UPDATE" value="false"/>
+      <elementValue elementRef="UPDATE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="REGION"/>
       <elementValue elementRef="UPDATE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SUB_REGION"/>
-      <elementValue elementRef="UPDATE" value="false"/>
+      <elementValue elementRef="UPDATE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY_KEY"/>
+      <elementValue elementRef="UPDATE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTHIGH"/>
+      <elementValue elementRef="UPDATE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTLOW"/>
+      <elementValue elementRef="UPDATE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_MERGE_UPDATE_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="MERGE_UPDATE_WHERE_STRING" value="&quot; &quot;" show="false"/>
     <elementParameter field="CHECK" name="USE_MERGE_UPDATE_DELETE_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="MERGE_UPDATE_DELETE_WHERE_STRING" value="&quot; &quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_MERGE_INSERT" value="true" show="false"/>
-    <elementParameter field="TABLE" name="SCHEMA_INSERT" show="false">
+    <elementParameter field="CHECK" name="USE_MERGE_INSERT" value="true"/>
+    <elementParameter field="TABLE" name="SCHEMA_INSERT">
       <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT_KEY"/>
-      <elementValue elementRef="INSERT" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY"/>
       <elementValue elementRef="INSERT" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT"/>
       <elementValue elementRef="INSERT" value="true"/>
@@ -1164,27 +1107,30 @@
       <elementValue elementRef="INSERT" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SUB_REGION"/>
       <elementValue elementRef="INSERT" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY_KEY"/>
+      <elementValue elementRef="INSERT" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTHIGH"/>
+      <elementValue elementRef="INSERT" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNTLOW"/>
+      <elementValue elementRef="INSERT" value="true"/>
     </elementParameter>
-    <elementParameter field="CHECK" name="USE_MERGE_INSERT_WHERE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="MERGE_INSERT_WHERE_STRING" value="&quot; &quot;" show="false"/>
-    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ORDERS_LOCATIONS&quot;"/>
+    <elementParameter field="CHECK" name="USE_MERGE_INSERT_WHERE" value="false"/>
+    <elementParameter field="TEXT" name="MERGE_INSERT_WHERE_STRING" value="" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ORDERS_NEW&quot;"/>
     <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;HR&quot;"/>
     <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
     <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
     <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
-    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false" show="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="TEMP_ORDERS_LOCATIONS_TABLE"/>
+    <elementParameter field="TEXT" name="LABEL" value="INSERT_DATA_TO_ORDERS_NEW"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="ORDERS_LOCATIONS" name="tELTOracleOutput_2">
-      <column comment="" key="true" length="-1" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+    <metadata connector="TABLE" label="ORDERS_NEW" name="tELTOracleOutput_1">
+      <column comment="" key="true" length="12" name="ACCOUNT_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="128" name="COUNTRY" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="6" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="128" name="REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -1193,9 +1139,18 @@
       <column comment="" key="false" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="5" name="COUNTRY_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="3" name="DISCOUNTHIGH" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="3" name="DISCOUNTLOW" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
-  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="224">
+  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleOutput_4" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="MERGE"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
@@ -1242,7 +1197,7 @@
       <column comment="" key="true" length="128" name="SUB_REGION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="8" name="PAYMENT" nullable="true" pattern="" precision="1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -1277,17 +1232,23 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tDBConnection_6">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
   </connection>
+  <connection connectorName="TABLE" label="HR.ORDERS" lineStyle="9" metaname="tELTOracleInput_1" offsetLabelX="0" offsetLabelY="0" source="tELTOracleInput_1" target="tELTOracleMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_1" show="false"/>
+  </connection>
+  <connection connectorName="TABLE" label="ORDERS_LOCATIONS" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTOracleMap_1" target="tELTOracleOutput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="table1" show="false"/>
+  </connection>
   <connection connectorName="TABLE" label="HR.PROVINCES" lineStyle="9" metaname="tELTOracleInput_2" offsetLabelX="0" offsetLabelY="0" source="tELTOracleInput_2" target="tELTOracleMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_2" show="false"/>
   </connection>
-  <connection connectorName="TABLE" label="Orders_reg_subregion" lineStyle="9" metaname="table4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tELTOracleMap_2" target="tELTOracleOutput_4">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="table4" show="false"/>
-  </connection>
-  <connection connectorName="TABLE" label="Orders_region" lineStyle="9" metaname="table3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tELTOracleMap_2" target="tELTOracleOutput_3">
+  <connection connectorName="TABLE" label="Orders_region" lineStyle="9" metaname="table3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tELTOracleMap_2" target="tELTOracleOutput_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="table3" show="false"/>
   </connection>
-  <connection connectorName="TABLE" label="ORDERS_NEW" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tELTOracleMap_2" target="tELTOracleOutput_1">
+  <connection connectorName="TABLE" label="ORDERS_NEW" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tELTOracleMap_2" target="tELTOracleOutput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="table2" show="false"/>
+  </connection>
+  <connection connectorName="TABLE" label="Orders_reg_subregion" lineStyle="9" metaname="table4" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tELTOracleMap_2" target="tELTOracleOutput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="table4" show="false"/>
   </connection>
   <connection connectorName="TABLE" label="HR.DISCOUNTSHIGH" lineStyle="9" metaname="tELTOracleInput_3" offsetLabelX="0" offsetLabelY="0" source="tELTOracleInput_3" target="tELTOracleMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_3" show="false"/>
@@ -1295,13 +1256,7 @@
   <connection connectorName="TABLE" label="HR.DISCOUNTSLOW" lineStyle="9" metaname="tELTOracleInput_4" offsetLabelX="0" offsetLabelY="0" source="tELTOracleInput_4" target="tELTOracleMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_4" show="false"/>
   </connection>
-  <connection connectorName="TABLE" label="HR.ORDERS" lineStyle="9" metaname="tELTOracleInput_1" offsetLabelX="0" offsetLabelY="0" source="tELTOracleInput_1" target="tELTOracleMap_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_1" show="false"/>
-  </connection>
-  <connection connectorName="TABLE" label="ORDERS_LOCATIONS" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTOracleMap_1" target="tELTOracleOutput_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="table1" show="false"/>
-  </connection>
-  <connection connectorName="TABLE" label="HR.ORDERS_LOCATIONS" lineStyle="9" metaname="tELTOracleOutput_2" offsetLabelX="0" offsetLabelY="0" source="tELTOracleOutput_2" target="tELTOracleMap_2">
+  <connection connectorName="TABLE" label="HR.ORDERS_LOCATIONS" lineStyle="9" metaname="tELTOracleOutput_2" offsetLabelX="0" offsetLabelY="0" source="tELTOracleInput_5" target="tELTOracleMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleOutput_2" show="false"/>
   </connection>
   <subjob>
@@ -1340,6 +1295,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTOracleInput_2" show="false"/>

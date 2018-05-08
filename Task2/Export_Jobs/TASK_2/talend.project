@@ -116,6 +116,45 @@
       <relatedItems xmi:id="_Zd7Z-FLXEei2rN19kp4hdw" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_Zd7Z-VLXEei2rN19kp4hdw" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_xhhJQFLsEei2rN19kp4hdw">
+      <baseItem xmi:id="_xhhJQVLsEei2rN19kp4hdw" id="_xgNhsFLsEei2rN19kp4hdw" version="0.1" type="job"/>
+      <relatedItems xmi:id="_xhhJQlLsEei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw" version="Latest" type="property"/>
+      <relatedItems xmi:id="_xhhJQ1LsEei2rN19kp4hdw" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJRFLsEei2rN19kp4hdw" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJRVLsEei2rN19kp4hdw" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJRlLsEei2rN19kp4hdw" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJR1LsEei2rN19kp4hdw" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJSFLsEei2rN19kp4hdw" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJSVLsEei2rN19kp4hdw" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJSlLsEei2rN19kp4hdw" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJS1LsEei2rN19kp4hdw" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xhhJTFLsEei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - ORDERS_REG_SUBREGION" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_xhhJTVLsEei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - DISCOUNTSLOW" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_xhhJTlLsEei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_xhhJT1LsEei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - ORDERS_REGION" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_xhhJUFLsEei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - PROVINCES" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_xhhJUVLsEei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - DISCOUNTSHIGH" version="Latest" type="schema"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_7VC_MFL0Eei2rN19kp4hdw">
+      <baseItem xmi:id="_7VC_MVL0Eei2rN19kp4hdw" id="_7Uj3AFL0Eei2rN19kp4hdw" version="0.1" type="job"/>
+      <relatedItems xmi:id="_7VC_MlL0Eei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw" version="Latest" type="property"/>
+      <relatedItems xmi:id="_7VC_M1L0Eei2rN19kp4hdw" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_NFL0Eei2rN19kp4hdw" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_NVL0Eei2rN19kp4hdw" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_NlL0Eei2rN19kp4hdw" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_N1L0Eei2rN19kp4hdw" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_OFL0Eei2rN19kp4hdw" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_OVL0Eei2rN19kp4hdw" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_OlL0Eei2rN19kp4hdw" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_O1L0Eei2rN19kp4hdw" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7VC_PFL0Eei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - ORDERS_REG_SUBREGION" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_7VC_PVL0Eei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - DISCOUNTSLOW" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_7VC_PlL0Eei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - ORDERS_NEW" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_7VC_P1L0Eei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - ORDERS_REGION" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_7VC_QFL0Eei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - PROVINCES" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_7VC_QVL0Eei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - DISCOUNTSHIGH" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_yJHwQFL2Eei2rN19kp4hdw" id="_xHDmAFKYEei2rN19kp4hdw - ORDERS_LOCATIONS" version="Latest" type="schema"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_EDSb8FKYEei2rN19kp4hdw" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
     <migrationTask xmi:id="_EDSb8VKYEei2rN19kp4hdw" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_EDSb8lKYEei2rN19kp4hdw" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
