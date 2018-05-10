@@ -1,10 +1,11 @@
 REGION,SUB_REGION,PAYMENT
-BeLux,North,8452.5
-Iberica,South,16215.0
-Nordics,North,1138.5
-Netherlands,North,22459.5
-Great Britain,North,8970.0
-Central Europe,East,50508.0
-Eastern Europe,East,40537.5
-South East Europe,South,21700.5
-France International,West,115057.5
+-1,-1,977.5
+Iberica,South,5405.0
+Great Britain,North,2990.0
+Eastern Europe,East,13627.5
+BeLux,North,2817.5
+South East Europe,South,7233.5
+France International,West,38352.5
+Central Europe,East,16836.0
+Netherlands,North,7486.5
+Nordics,North,379.5
