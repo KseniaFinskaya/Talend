@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_hFVWQFRCEeiYhZa1HBtm_g" name="HR" id="_YJQMEFRCEeiYhZa1HBtm_g" label="HR" dataPackage="_hHSeEFRCEeiYhZa1HBtm_g" ContextMode="true" ContextId="_gugKoFRCEeiYhZa1HBtm_g" contextName="DEV" DatabaseType="Oracle with service name" DriverClass="oracle.jdbc.OracleDriver" URL="jdbc:oracle:thin:@(description=(address=(protocol=tcp)(host=192.168.56.1)(port=1521))(connect_data=(service_name=orcl)))" dbVersionString="ORACLE_12" Port="context.HR_Port" Username="context.HR_Login" Password="context.HR_Password" ServerName="context.HR_Server" DatasourceName="" FileFieldName="" SID="context.HR_ServiceName" SqlSynthax="" StringQuote="" NullChar="" DbmsId="oracle_id" ProductId="ORACLE" AdditionalParams="context.HR_AdditionalParams" StandardSQL="true" SQLMode="false" UiSchema="context.HR_Schema">
+    <taggedValue xmi:id="_hFWkYFRCEeiYhZa1HBtm_g" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_hFg8cFRCEeiYhZa1HBtm_g" tag="package filter" value=""/>
+    <taggedValue xmi:id="_hFr7kFRCEeiYhZa1HBtm_g" tag="Status" value=""/>
+    <taggedValue xmi:id="_hFr7kVRCEeiYhZa1HBtm_g" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_hFr7klRCEeiYhZa1HBtm_g" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_hFr7k1RCEeiYhZa1HBtm_g" tag="Description" value=""/>
+    <taggedValue xmi:id="_hFr7lFRCEeiYhZa1HBtm_g" tag="Author" value=""/>
+    <taggedValue xmi:id="_hFsioFRCEeiYhZa1HBtm_g" tag="otherParameter"/>
+    <taggedValue xmi:id="_hGOHEFRCEeiYhZa1HBtm_g" tag="DB ProductName" value="Oracle"/>
+    <taggedValue xmi:id="_hGOHEVRCEeiYhZa1HBtm_g" tag="DB ProductVersion" value="Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production"/>
+    <taggedValue xmi:id="_hGOHElRCEeiYhZa1HBtm_g" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_hFWkYVRCEeiYhZa1HBtm_g" key="CONN_PARA_KEY_USERNAME" value="context.HR_Login"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_hHSeEFRCEeiYhZa1HBtm_g" name="HR" dataManager="_hFVWQFRCEeiYhZa1HBtm_g">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_rB1boFRCEeiYhZa1HBtm_g" name="PAYMENTS" id="_rBxxQFRCEeiYhZa1HBtm_g" label="PAYMENTS" tableType="TABLE">
+      <feature xsi:type="relational:TdColumn" xmi:id="_rB1boVRCEeiYhZa1HBtm_g" name="PAYMENTID" label="PAYMENTID" length="9" sourceType="NUMBER" talendType="id_BigDecimal">
+        <taggedValue xmi:id="_rB1bolRCEeiYhZa1HBtm_g" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_rB1bo1RCEeiYhZa1HBtm_g" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_rB1bpFRCEeiYhZa1HBtm_g" name="NUMBER" numericPrecisionRadix="10" javaDataType="3" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_rB1bpVRCEeiYhZa1HBtm_g" name="CUSTOMERID" label="CUSTOMERID" length="5" sourceType="NUMBER" talendType="id_BigDecimal">
+        <taggedValue xmi:id="_rB1bplRCEeiYhZa1HBtm_g" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_rB1bp1RCEeiYhZa1HBtm_g" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_rB1bqFRCEeiYhZa1HBtm_g" name="NUMBER" numericPrecisionRadix="10" javaDataType="3" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_rB1bqVRCEeiYhZa1HBtm_g" name="PRODUCTID" label="PRODUCTID" length="7" sourceType="NUMBER" talendType="id_BigDecimal">
+        <taggedValue xmi:id="_rB1bqlRCEeiYhZa1HBtm_g" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_rB1bq1RCEeiYhZa1HBtm_g" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_rB1brFRCEeiYhZa1HBtm_g" name="NUMBER" numericPrecisionRadix="10" javaDataType="3" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_rB1brVRCEeiYhZa1HBtm_g" name="TRANSACTIONDATE" label="TRANSACTIONDATE" length="26" sourceType="VARCHAR2" talendType="id_String">
+        <taggedValue xmi:id="_rB1brlRCEeiYhZa1HBtm_g" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_rB1br1RCEeiYhZa1HBtm_g" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_rB1bsFRCEeiYhZa1HBtm_g" name="VARCHAR2" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_rB1bsVRCEeiYhZa1HBtm_g" name="CREDITCARD" label="CREDITCARD" length="26" sourceType="VARCHAR2" talendType="id_String">
+        <taggedValue xmi:id="_rB1bslRCEeiYhZa1HBtm_g" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_rB1bs1RCEeiYhZa1HBtm_g" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_rB1btFRCEeiYhZa1HBtm_g" name="VARCHAR2" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_rB1btVRCEeiYhZa1HBtm_g" name="CREDITCARDNUMBER" label="CREDITCARDNUMBER" length="26" sourceType="VARCHAR2" talendType="id_String">
+        <taggedValue xmi:id="_rB1btlRCEeiYhZa1HBtm_g" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_rB1bt1RCEeiYhZa1HBtm_g" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_rB1buFRCEeiYhZa1HBtm_g" name="VARCHAR2" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_OJI2OVT_EeiALJlddY8dqA" name="SOURCEFILE" label="SOURCEFILE" length="300" sourceType="VARCHAR2" talendType="id_String">
+        <taggedValue xmi:id="_OJI2OlT_EeiALJlddY8dqA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_OJI2O1T_EeiALJlddY8dqA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_OJI2PFT_EeiALJlddY8dqA" name="VARCHAR2" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Schema>
+</xmi:XMI>
