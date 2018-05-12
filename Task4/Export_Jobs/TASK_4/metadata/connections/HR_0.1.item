@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_y8deEFUtEeiVZfMNme00IQ" name="HR" id="_s-MI0FUtEeiVZfMNme00IQ" label="HR" dataPackage="_y9gm8FUtEeiVZfMNme00IQ" ContextMode="true" ContextId="_yQkBYFUtEeiVZfMNme00IQ" contextName="Default" DatabaseType="Oracle with service name" DriverClass="oracle.jdbc.OracleDriver" URL="jdbc:oracle:thin:@(description=(address=(protocol=tcp)(host=192.168.56.1)(port=1521))(connect_data=(service_name=orcl)))" dbVersionString="ORACLE_12" Port="context.HR_Port" Username="context.HR_Login" Password="context.HR_Password" ServerName="context.HR_Server" DatasourceName="" FileFieldName="" SID="context.HR_ServiceName" SqlSynthax="" StringQuote="" NullChar="" DbmsId="oracle_id" ProductId="ORACLE" AdditionalParams="context.HR_AdditionalParams" StandardSQL="true" SQLMode="false" UiSchema="context.HR_Schema">
+    <taggedValue xmi:id="_y8deEVUtEeiVZfMNme00IQ" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_y8kLwFUtEeiVZfMNme00IQ" tag="package filter" value=""/>
+    <taggedValue xmi:id="_y8ky0FUtEeiVZfMNme00IQ" tag="Status" value=""/>
+    <taggedValue xmi:id="_y8ky0VUtEeiVZfMNme00IQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_y8ky0lUtEeiVZfMNme00IQ" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_y8ky01UtEeiVZfMNme00IQ" tag="Description" value=""/>
+    <taggedValue xmi:id="_y8ky1FUtEeiVZfMNme00IQ" tag="Author" value=""/>
+    <taggedValue xmi:id="_y8ky1VUtEeiVZfMNme00IQ" tag="otherParameter"/>
+    <taggedValue xmi:id="_y8-bcFUtEeiVZfMNme00IQ" tag="DB ProductName" value="Oracle"/>
+    <taggedValue xmi:id="_y8-bcVUtEeiVZfMNme00IQ" tag="DB ProductVersion" value="Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production"/>
+    <taggedValue xmi:id="_y8-bclUtEeiVZfMNme00IQ" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_y8deElUtEeiVZfMNme00IQ" key="CONN_PARA_KEY_USERNAME" value="context.HR_Login"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_y9gm8FUtEeiVZfMNme00IQ" name="HR" dataManager="_y8deEFUtEeiVZfMNme00IQ">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_CNafoFUuEeiVZfMNme00IQ" name="DECODE_TABLE_BASE64" id="_CNZ4kFUuEeiVZfMNme00IQ" label="DECODE_TABLE_BASE64" tableType="TABLE">
+      <feature xsi:type="relational:TdColumn" xmi:id="_IQDhAVX-Eeitb9YA5h8FRQ" name="ENCODEDBYTES" label="ENCODEDBYTES" length="4000" sourceType="BLOB" talendType="id_Object">
+        <taggedValue xmi:id="_IQDhAlX-Eeitb9YA5h8FRQ" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_IQDhA1X-Eeitb9YA5h8FRQ" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_IQDhBFX-Eeitb9YA5h8FRQ" name="BLOB" numericPrecisionRadix="10" javaDataType="2004" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_CNafpVUuEeiVZfMNme00IQ" name="FILENAME" label="FILENAME" length="300" sourceType="VARCHAR2" talendType="id_String">
+        <taggedValue xmi:id="_CNafplUuEeiVZfMNme00IQ" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_CNafp1UuEeiVZfMNme00IQ" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_CNafqFUuEeiVZfMNme00IQ" name="VARCHAR2" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Schema>
+</xmi:XMI>

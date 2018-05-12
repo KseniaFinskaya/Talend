@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_yQyD0FUtEeiVZfMNme00IQ" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_yQyD0VUtEeiVZfMNme00IQ" comment="" name="HR_Login" prompt="HR_Login?" promptNeeded="false" type="id_String" value="HR"/>
+  <contextParameter xmi:id="_yQyD0lUtEeiVZfMNme00IQ" comment="" name="HR_AdditionalParams" prompt="HR_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_yQyD01UtEeiVZfMNme00IQ" comment="" name="HR_Password" prompt="HR_Password?" promptNeeded="false" type="id_Password" value="1npY+p7HXgE="/>
+  <contextParameter xmi:id="_yQyD1FUtEeiVZfMNme00IQ" comment="" name="HR_Server" prompt="HR_Server?" promptNeeded="false" type="id_String" value="192.168.56.1"/>
+  <contextParameter xmi:id="_yQyD1VUtEeiVZfMNme00IQ" comment="" name="HR_Schema" prompt="HR_Schema?" promptNeeded="false" type="id_String" value="HR"/>
+  <contextParameter xmi:id="_yQyD1lUtEeiVZfMNme00IQ" comment="" name="HR_ServiceName" prompt="HR_ServiceName?" promptNeeded="false" type="id_String" value="orcl"/>
+  <contextParameter xmi:id="_yQyD11UtEeiVZfMNme00IQ" comment="" name="HR_Port" prompt="HR_Port?" promptNeeded="false" type="id_String" value="1521"/>
+</talendfile:ContextType>
