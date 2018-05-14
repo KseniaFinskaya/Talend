@@ -299,5 +299,17 @@
         <sqlDataType xmi:id="_hkpydVdWEeiZmqUt39eAuA" name="NUMBER" numericPrecisionRadix="10" javaDataType="3" nullable="columnNullable"/>
       </feature>
     </ownedElement>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_euscsFd8EeiZmqUt39eAuA" name="PURCHASE_FILES" id="_eur1oFd8EeiZmqUt39eAuA" label="PURCHASE_FILES" tableType="TABLE">
+      <feature xsi:type="relational:TdColumn" xmi:id="_euscsVd8EeiZmqUt39eAuA" name="SOURCEFILE" label="SOURCEFILE" length="300" sourceType="VARCHAR2" talendType="id_String" key="true">
+        <taggedValue xmi:id="_euscsld8EeiZmqUt39eAuA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_euscs1d8EeiZmqUt39eAuA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_eusctFd8EeiZmqUt39eAuA" name="VARCHAR2" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_eusctVd8EeiZmqUt39eAuA" name="FILEPATH" label="FILEPATH" length="300" sourceType="VARCHAR2" talendType="id_String">
+        <taggedValue xmi:id="_eusctld8EeiZmqUt39eAuA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_eusct1d8EeiZmqUt39eAuA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_euscuFd8EeiZmqUt39eAuA" name="VARCHAR2" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
   </orgomg.cwm.resource.relational:Schema>
 </xmi:XMI>

@@ -103,6 +103,7 @@
       <relatedItems xmi:id="_vSGFwFdJEeiZmqUt39eAuA" id="_9eHSQFRZEeisGpOxIdn14A" version="Latest" type="context"/>
       <relatedItems xmi:id="_vSGFwVdJEeiZmqUt39eAuA" id="_8cYSAFRlEeisGpOxIdn14A" version="Latest" type="context"/>
       <relatedItems xmi:id="_4jEvoFdOEeiZmqUt39eAuA" id="_DIsg8FdDEeiZmqUt39eAuA - WRK_FCT_PURCHASE" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_TVirwFd_EeiZmqUt39eAuA" id="_DIsg8FdDEeiZmqUt39eAuA - PURCHASE_FILES" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_23C6YFdIEeiZmqUt39eAuA">
       <baseItem xmi:id="_23C6YVdIEeiZmqUt39eAuA" id="_WTuu4FSEEeisGpOxIdn14A" version="0.1" type="job"/>
@@ -219,6 +220,7 @@
       <relatedItems xmi:id="_FkOvcldoEeiZmqUt39eAuA" id="_KIHKIFdDEeiZmqUt39eAuA" version="Latest" type="context"/>
       <relatedItems xmi:id="__26x4FdoEeiZmqUt39eAuA" id="_DIsg8FdDEeiZmqUt39eAuA" version="Latest" type="property"/>
       <relatedItems xmi:id="_mx4VMFdqEeiZmqUt39eAuA" id="_DIsg8FdDEeiZmqUt39eAuA - WRK_FCT_PURCHASE" version="Latest" type="schema"/>
+      <relatedItems xmi:id="__oxboFd9EeiZmqUt39eAuA" id="_DIsg8FdDEeiZmqUt39eAuA - PURCHASE_FILES" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_CTU0oFdCEeiZmqUt39eAuA" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
     <migrationTask xmi:id="_CTU0oVdCEeiZmqUt39eAuA" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
